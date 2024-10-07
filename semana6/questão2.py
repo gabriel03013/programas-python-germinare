@@ -20,8 +20,8 @@ while saldo > 0:
     if aposta > saldo:
         print(f'{VERMELHO}Você deve fazer uma aposta dentro do limite do seu saldo restante! {NORMAL} ')
     else:
-        dado1 = randint(5,6)
-        dado2 = randint(5,6)
+        dado1 = randint(1,6)
+        dado2 = randint(1,6)
         soma_dados = dado1 + dado2
         print(f'{AMARELO}Os dados foram girados...{NORMAL}')
         
