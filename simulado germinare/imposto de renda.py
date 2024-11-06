@@ -1,19 +1,19 @@
-salario = float(input('Digite seu salário: R$ '))
-
-def imposto_de_renda(salario):
-    if salario <= 1900:
-        imposto = 0
-    elif salario > 1900 and salario < 2800:
-        imposto = (salario * 12 * 0.075) - 142.80
-    elif salario > 2800 and salario < 3800:
-        imposto = (salario * 12 * 0.15) - 354.80
-    elif salario > 3800 and salario < 4600:
-        imposto = (salario * 12 * 0.225) - 636.13
-    elif salario > 4600:
-        imposto = (salario * 12 * 0.275) - 869.36
-    else:
-        'Salário inválido'
+def calcular_imposto_renda(salario):
+    if 1001 <= salario < 3001:
+        imposto = salario * 0.1
     
+    elif 3001 <= salario < 5001:
+        imposto = salario * 0.2
+    
+    elif salario > 5001: 
+        imposto = salario * 0.3
+
     return imposto
 
-print(f'Você deve pagar R$ {(imposto_de_renda(salario)):.2f} de imposto.')
+salario = float(input('Digite seu salário: '))
+
+if salario < 1001:
+    print('Você é isento de imposto de renda.')
+
+else:
+    print(f'O imposto de renda a ser pago é de: R$ {(calcular_imposto_renda(salario)):.2f}')
