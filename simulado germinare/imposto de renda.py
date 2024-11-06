@@ -5,7 +5,7 @@ def calcular_imposto_renda(salario):
     elif 3001 <= salario < 5001:
         imposto = salario * 0.2
     
-    elif salario > 5001: 
+    elif salario >= 5001: 
         imposto = salario * 0.3
 
     return imposto
